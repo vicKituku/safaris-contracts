@@ -31,7 +31,11 @@ from pathlib import Path
 
 from docling.datamodel.accelerator_options import AcceleratorDevice, AcceleratorOptions
 from docling.datamodel.base_models import InputFormat
-from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode
+from docling.datamodel.pipeline_options import (
+    EasyOcrOptions,
+    PdfPipelineOptions,
+    TableFormerMode,
+)
 from docling.document_converter import DocumentConverter, PdfFormatOption
 
 REPO = Path(__file__).resolve().parent
@@ -48,6 +52,11 @@ def build_converter(*, ocr: bool) -> DocumentConverter:
     """A converter for PDF (+ DOCX). `ocr` toggles the slow OCR pass (PDF only)."""
     pdf = PdfPipelineOptions()
     pdf.do_ocr = ocr
+    if ocr:
+        # docling 2.108's default OCR (RapidOCR / torch) errors with
+        # "Unsupported configuration: torch.PP-OCRv6.det.small". EasyOCR is the
+        # reliable cross-platform engine; it downloads its models once.
+        pdf.ocr_options = EasyOcrOptions()
     pdf.do_table_structure = True
     pdf.table_structure_options.mode = TableFormerMode.ACCURATE  # rate matrices matter
     # AUTO → MPS on Apple Silicon, CPU elsewhere. Same script runs anywhere.
@@ -98,6 +107,7 @@ def main() -> int:
     conv = build_converter(ocr=False)
     ocr_conv: DocumentConverter | None = None
     done = skipped = failed = ocr_used = 0
+    low_text: list[str] = []  # ended up with little/no text even after OCR — review these
     started = time.monotonic()
 
     for n, src in enumerate(sources, 1):
@@ -109,17 +119,26 @@ def main() -> int:
         try:
             doc = conv.convert(src).document
             md = doc.export_to_markdown()
-            # Scanned/empty PDF text layer → one OCR retry.
+            # Scanned/image PDF (empty text layer) → one OCR retry. Non-fatal:
+            # if OCR errors we keep the non-OCR result rather than losing the doc.
             if src.suffix.lower() == ".pdf" and len(md.strip()) < MIN_CONTENT_CHARS:
-                if ocr_conv is None:
-                    ocr_conv = build_converter(ocr=True)
-                doc = ocr_conv.convert(src).document
-                md = doc.export_to_markdown()
-                ocr_used += 1
+                try:
+                    if ocr_conv is None:
+                        ocr_conv = build_converter(ocr=True)
+                    ocr_doc = ocr_conv.convert(src).document
+                    ocr_md = ocr_doc.export_to_markdown()
+                    if len(ocr_md.strip()) > len(md.strip()):
+                        doc, md = ocr_doc, ocr_md
+                        ocr_used += 1
+                except Exception as ocr_exc:
+                    print(f"[{n}/{total}] warn OCR failed, keeping non-OCR text {rel}: {ocr_exc}",
+                          file=sys.stderr)
+                if len(md.strip()) < MIN_CONTENT_CHARS:
+                    low_text.append(str(rel))
             write_artifacts(adir, doc, md)
             done += 1
             print(f"[{n}/{total}] ok   {rel}")
-        except Exception as exc:  # batch tool: log and keep going
+        except Exception as exc:  # unreadable/corrupt source: log and keep going
             failed += 1
             print(f"[{n}/{total}] FAIL {rel}: {exc}", file=sys.stderr)
 
@@ -128,6 +147,11 @@ def main() -> int:
         f"\nDone in {elapsed:.0f}s — extracted {done} (OCR {ocr_used}), "
         f"skipped {skipped}, failed {failed}."
     )
+    if low_text:
+        print(f"\n{len(low_text)} doc(s) still have little/no text (image-only or empty) "
+              f"— review manually:")
+        for p in low_text:
+            print(f"  - {p}")
     return 1 if failed else 0
 
 

@@ -2,3 +2,8 @@
 # Pinned so the script produces the same artifacts whenever/whoever runs it.
 # docling pulls its own heavy deps (torch, pandas, transformers, …).
 docling==2.108.0
+
+# OCR engine for scanned/image-only PDFs. docling 2.108's default (RapidOCR on
+# the torch backend) is broken ("Unsupported configuration: torch.PP-OCRv6"),
+# so extract.py forces EasyOCR. Downloads its models once, then caches them.
+easyocr==1.7.2
