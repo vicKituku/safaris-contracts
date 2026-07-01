@@ -1,0 +1,1 @@
+Guests requesting a private (non-sharing) room at Enashipai Resort will incur a *single supplement* based on the **Fountain Room** rate. This applies to clients who prefer not to share a cottage.

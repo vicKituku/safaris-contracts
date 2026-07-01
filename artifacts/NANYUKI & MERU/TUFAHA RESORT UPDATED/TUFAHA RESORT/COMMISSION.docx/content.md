@@ -1,0 +1,1 @@
+Please note that the rates are commissionable at 10% for travel agents.

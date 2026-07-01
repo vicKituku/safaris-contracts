@@ -1,0 +1,1 @@
+Residents rates are commissionable at 10%

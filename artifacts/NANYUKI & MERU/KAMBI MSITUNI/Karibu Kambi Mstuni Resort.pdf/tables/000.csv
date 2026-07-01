@@ -1,0 +1,8 @@
+0,1,2,3
+ROOM TYPE,BOARD TYPE,AMOUNT (Single),AMOUNT (Double)
+Deluxe Room,BB/HB/FB,"7,500/9,500/11,500","9,000/15,000/17,500"
+Executive Room,BB/HB/FB,"8,500/10,500/12,500","10,000/14,000/18,500"
+Twins Room,BB/HB/FB,,"11,500/16,000/20,500"
+Family Room (4 pax),BB/HB/FB,,"20,000/24,000/28,000"
+Family Cottage (6 pax),BB/HB/FB,,"25,000/36,000/50,000"
+Family Cottage (8 pax),BB/HB/FB,,"35,000/50,000/65,000"

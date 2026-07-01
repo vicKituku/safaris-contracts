@@ -1,0 +1,36 @@
+<!-- image -->
+
+## SKYSHIP CO. LTD.
+
+Kayahwe Road, Kilimani P.O.Box 59730,00200 Nairobi, Kenya
+
+Mobile : 0769909838 /0734011437
+
+Email: skyshipco@gmail.com
+
+| HOTAIR                  | SEASONS/MONTHS   |   JAN |   FEB |   MARCH |   APRIL |   MAY |   JUNE |   JULY |   AUG |   SEP |   OCT |   NOV |   DEC |
+|-------------------------|------------------|-------|-------|---------|---------|-------|--------|--------|-------|-------|-------|-------|-------|
+| BALLOON                 | ADULT            |   310 |   310 |     310 |     300 |   300 |    310 |    320 |   320 |   320 |   320 |   310 |   310 |
+| FLIGHT                  | CHILD/GUIDE      |   240 |   240 |     240 |     240 |   240 |    240 |    240 |   240 |   240 |   240 |   240 |   240 |
+| NAROKCOUNTY             | ADULT            |    80 |    80 |      80 |      80 |    80 |     80 |     80 |    80 |    80 |    80 |    80 |    80 |
+| GOVERNMENT LANDING FEES | CHILD/GUIDE      |    35 |    35 |      35 |      35 |    35 |     35 |     35 |    35 |    35 |    35 |    35 |    35 |
+| TOTAL                   | ADULT            |   390 |   390 |     390 |     380 |   380 |    390 |    400 |   400 |   400 |   400 |   390 |   390 |
+|                         | CHILD/GUIDE      |   275 |   275 |     275 |     275 |   275 |    275 |    275 |   275 |   275 |   275 |   275 |   275 |
+
+1. ALL SKYSHIP PASSENGERS ARE INSURED WITH THE COVER OF UPTO $150,000 PER PASSENGER
+2. ALL SKYSHIP PASSENGERS LOST VALUABLES HAVE INSURANCE OF UPTO $5,000 COVERING TELEPHONE, BINOCULARS, LAPTOPS, ETC
+3. ALL PASSENGERS HAVE TO PAY APPLICABLE LANDING FEE
+4. A COMMUNITY FEE OF $10 IS INCLUDED IN THE PRICE ABOVE
+5. SKYHIP COMPANY HAS A HELICOPTER EVACUATION SERVICE AT NO EXTRA COST
+6. LARGE GROUP MAYBE ELIGIBLE FOR DISCOUNTS BASED ON AVAILABILITY PLEASE CONTACT US
+7. WE OFFER EXCLUSIVE VIP SERVICE AT EXTRA COST. PLEASE CONTACT US
+8. SKYSHIP OFFERS SPECIAL EVENTS HOSTING WITH SPECIAL BRANDING INCLUDING BRANDING OF BASKET, BREAKFAST &amp; VEHICLES FOR WEDDING   ANNIVERSARIES AND CORPORATE INCENTIVES.
+9. ALL PRICES ARE DENOMINATED IN USD. GOVERNMENT/COUNTY TAXES AND LANDING FEE MAY CHANGE ON SHORT ORDER
+
+SKYSHIP RECOMMENDED RACK RATE IS $510 PER ADULT AND $310 PER CHILD/GUIDE
+
+## 2025 NET/RACK
+
+RATES
+
+## 1 ST  JAN TO 31 ST  DECEMBER 2025

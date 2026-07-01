@@ -1,0 +1,1 @@
+The rates are commissionable at 12%

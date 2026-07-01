@@ -1,0 +1,1 @@
+Attached is our STO rate to help you plan your bookings. We however remain flexible to extend further group discounts and custom make packages that suit your clients' needs and budget. Additionally, please see our early bird offer for the festive season for your consideration.

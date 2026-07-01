@@ -1,0 +1,15 @@
+RoomType,Occupancy,High Season,Peak Season,High Season,Easter,High Season
+Based on Half Board,,01/11/24,23/12/24,03/01/25,18/04/25,22/04/25
+,,22/12/24,02/01/25,17/04/25,21/04/25,31/10/25
+StandardRoom,DBL,13.000,18.000,13.000,15.500,13.000
+StandardRoom,SGL,19.000,29.000,19.000,24.000,19.000
+DeluxeRoom,DBL,16.800,23.800,16.800,20.300,16.800
+DeluxeRoom,SGL,26.600,40.600,26.600,33.600,26.600
+Deluxe Bungalow (previously Comfort Bungalow),DBL,18.700,26.700,18.700,22.700,18.700
+Deluxe Bungalow (previously Comfort Bungalow),SGL,30.400,46.400,30.400,38.400,30.400
+Deluxe Bungalow (previously Comfort Bungalow),Room-Surcharge for Seaview,5.000,5.000,5.000,5.000,5.000
+Junior Suite,DBL,22.500,32.500,22.500,27.500,22.500
+Junior Suite,SGL,38.000,58.000,38.000,48.000,38.000
+Junior Suite,3rd person,7.000,7.000,7.000,7.000,7.000
+Suite,DBL,32.000,47.000,32.000,39.500,32.000
+,SGL,57.000,87.000,57.000,72.000,57.000

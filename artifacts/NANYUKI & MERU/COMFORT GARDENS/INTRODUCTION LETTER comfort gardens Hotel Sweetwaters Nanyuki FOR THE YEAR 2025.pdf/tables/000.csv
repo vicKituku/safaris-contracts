@@ -1,0 +1,15 @@
+RESIDENTS.ROOMTYPE,RESIDENTS.PEAK(KSH),RESIDENTS.OFF PEAK(KSH),NON-RESIDENTS.PEAK(USD),NON-RESIDENTS.OFF-PEAK(USD)
+SINGLE BB,"11,500","10,350",115,104
+DOUBLE BB,"13,800","12,650",138,127
+TWIN BB,"16,675","14,950",167,150
+TRIPLE BB,"20,700","18,975",207,190
+PENTHOUSE BB,,,,
+COTTAGE BB(MAX 6 PAX),"40,250","34,500",403,345
+CHILD SHARING POLICIES,,,,
+0-5 YEARS,FREE OF CHARGE,,,
+6-11 YEARS(SHARING WITH THE ADULT),50% OF THE ADULT RATE,,,
+6-11 YEARS(OWN ROOM),75 %OFTHEADULT RATE,,,
+12 YEARS AND ABOVE,ADULT RATE,,,
+CONFERENCE PACKAGES,CONFERENCE PACKAGES,,,
+"FULL DAY CONFERENCE @3,800 per person","HALF DAY CONFERENCE @3,200 per person",,,
+It includes; *Use of conference Hall *AM tea break with a selection of 2 Hot snacks *PM tea break with assorted snacks and pastries. *Lunch with a soft drink *Provision of stationery. *1 litre Mineral water per day. *Mints *PA system and projector,It includes; *Use of conference Hall *AM tea break *Lunch with a soft drink *Provision of stationery. *0.5 litres mineral Water per day. *Mints. *PA system and projector,,,

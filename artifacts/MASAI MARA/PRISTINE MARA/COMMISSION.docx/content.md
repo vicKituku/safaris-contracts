@@ -1,0 +1,1 @@
+Commissionable at 10% this is applicable for both resident and non res

@@ -1,0 +1,33 @@
+## Olesamara Special Gateaway -2 nights stay
+
+Create lasting memories  with our exclusive romantic experiences designed for couples.
+
+STANDARD SUITE PACKAGE
+
+Kes 78,600
+
+GARDEN SUITE PACKAGE
+
+LUXURY TENT PACKAGE
+
+Kes 90,200
+
+Kes 115,400
+
+## OUR PACKAGE INCLUDES
+
+ROMANTIC CANDLELIT DINNER
+
+COUPLES SPA SESSION
+
+GAMEDRIVE  &amp; ANIMAL ORPHANAGE
+
+AFTERNOON TEA
+
+PARK ENTRY FEES ARE NOT INCLUDED
+
+CONTACT US : +254 712426034 | + 254 719 709195
+
+Box
+
+<!-- image -->

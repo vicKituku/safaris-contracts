@@ -1,0 +1,23 @@
+<!-- image -->
+
+## EXTRA ACTIVITIES TO BOOK WHILE STAYING AT OLDARPOI MARA CAMP
+
+| Activities                                           | Nashulai Conservancy Fees                  | Rates per person   | Remarks                                                          |
+|------------------------------------------------------|--------------------------------------------|--------------------|------------------------------------------------------------------|
+| Hot Air Balloon Safari                               | Not applicable                             | USD $450           |                                                                  |
+| Biking Safari within Nashulai _E-Bikes               | Applicable                                 | USD $120           | Professional bikers only                                         |
+| Walking Safari Maasai Warrior within Nashulai Maasai | Applicable                                 | USD $50            | 3 hrs                                                            |
+| Sekenani River Restoration Program Tree Planting     | Not applicable                             | USD $20            |                                                                  |
+| Sundowner                                            | Applicable if within Nashulai Conservancy. | USD $50            | Minimum of 4 Pax In conservancy and 2 within the camp Wilderness |
+| Maasai Village                                       | Not applicable                             | USD $30            |                                                                  |
+| Bush Dinner                                          | Applicable if within Nashulai Conservancy. | USD $50            | Minimum of 4 Pax In conservancy and 2 within the camp Wilderness |
+| Couples Bush Dinner                                  | Applicable if within Nashulai Conservancy. | USD 80             |                                                                  |
+| Bush Breakfast                                       | Applicable if within Nashulai Conservancy. | USD $50            | Minimum of 4 Pax In conservancy and 2 within the camp Wilderness |
+| Night Game Drive                                     | Applicable                                 | USD $60            |                                                                  |
+
+## NASHULAI CONSERVANCY RATES
+
+|           | Non Reseidents   |   Residents |
+|-----------|------------------|-------------|
+| Jan -June | $60              |        1500 |
+| July Dec  | $80              |        3000 |

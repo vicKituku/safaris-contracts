@@ -1,0 +1,8 @@
+High Season,%Amount of the Invoice payable
+0-14 days,100
+15-30 days,50
+31-55 days,30
+Mid &Low Season,%Amount of the Invoice payable
+0-7 days,100
+8-14 days,50
+15-35 days,30

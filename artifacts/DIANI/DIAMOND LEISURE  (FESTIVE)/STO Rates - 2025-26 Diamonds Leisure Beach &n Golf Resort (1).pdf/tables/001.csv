@@ -1,0 +1,5 @@
+ROOMCATEGORIES,A,B,C,D,E
+Maximum room occupancy,3,3,3,3,18
+Minimum room occupancy,1,1,1,1,1
+Bed type / twin beds,Queen/Yes,Queen/Yes,Queen/Yes,Queen/Yes,Queen/Yes
+Extra bed / sofa bed,1/0,1/0,1/0,1/0,6/0

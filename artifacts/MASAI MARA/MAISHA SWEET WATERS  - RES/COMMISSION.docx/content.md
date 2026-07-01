@@ -1,0 +1,1 @@
+Note that the Resident Rates are commissionable at 15%  as for the Rack Rates you may add 10% or more

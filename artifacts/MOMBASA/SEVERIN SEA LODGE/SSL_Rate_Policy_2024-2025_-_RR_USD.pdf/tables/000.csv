@@ -1,0 +1,15 @@
+RoomType,Occupancy,High Season,Peak Season 23/12/24,High Season 03/01/25,Easter,High Season 22/04/25
+Based on Half Board,,01/11/24,,,18/04/25,
+,,22/12/24,02/01/25,17/04/25,21/04/25,31/10/25
+StandardRoom,DBL,74,103,74,89,74
+StandardRoom,SGL,109,166,109,137,109
+DeluxeRoom,DBL,96,136,96,116,96
+DeluxeRoom,SGL,152,232,152,192,152
+Deluxe Bungalow (previously Comfort Bungalow),DBL,107,153,107,130,107
+Deluxe Bungalow (previously Comfort Bungalow),SGL,174,265,174,219,174
+Deluxe Bungalow (previously Comfort Bungalow),Room-Surcharge for Seaview,29,29,29,29,29
+Junior Suite,DBL,129,186,129,157,129
+Junior Suite,SGL,217,331,217,274,217
+Junior Suite,3rd person,40,40,40,40,40
+Suite,DBL,183,269,183,226,183
+Suite,SGL,326,497,326,411,326
