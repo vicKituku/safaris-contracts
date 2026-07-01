@@ -1,17 +1,25 @@
-# This repo holds the RAW contract corpus only (source of truth).
-# The retired Python/Mongo ingestion+pricing pass has been removed (see
-# safaris-knowledgebase ADR-0001 / ADR-0003). Keep it out for good.
+# This repo holds the RAW contract corpus (source of truth) plus the offline
+# docling extraction tool. The retired Python/Mongo ingestion+pricing pass has
+# been removed (see safaris-knowledgebase ADR-0001 / ADR-0003) and stays out.
+#
+# EXCEPTION: docling is a permitted offline parse tool (ADR-0003 clause 4).
+# Its script (extract.py), requirements.txt, EXTRACTION.md, and the generated
+# artifacts/ ARE tracked — artifacts/ is the whole point of the Mac-mini handoff.
 
 # Secrets — never commit
 .env
 .env.*
 
-# Python (retired tooling)
+# Python runtime cruft (NOT the extraction tool itself)
 __pycache__/
 *.py[cod]
 *_env/
 venv/
-requirements.txt
+.venv/
 
-# Generated reports/artifacts
+# docling model cache, if pointed at this tree
+.docling/
+models/
+
+# Generated reports from the retired tooling
 ingestion/reports/

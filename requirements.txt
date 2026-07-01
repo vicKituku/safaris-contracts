@@ -1,0 +1,4 @@
+# Offline docling extraction tool (permitted per safaris-knowledgebase ADR-0003 clause 4).
+# Pinned so the script produces the same artifacts whenever/whoever runs it.
+# docling pulls its own heavy deps (torch, pandas, transformers, …).
+docling==2.108.0
