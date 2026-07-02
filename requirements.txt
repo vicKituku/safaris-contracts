@@ -3,7 +3,9 @@
 # docling pulls its own heavy deps (torch, pandas, transformers, …).
 docling==2.108.0
 
-# OCR engine for scanned/image-only PDFs. docling 2.108's default (RapidOCR on
-# the torch backend) is broken ("Unsupported configuration: torch.PP-OCRv6"),
-# so extract.py forces EasyOCR. Downloads its models once, then caches them.
+# OCR for scanned/image-only PDFs. docling 2.108's default (RapidOCR/torch) is
+# broken ("Unsupported configuration: torch.PP-OCRv6"). extract.py prefers Apple
+# Vision (ocrmac) on macOS — best on clean scans — and falls back to EasyOCR
+# elsewhere. Both download/use their models locally.
+ocrmac==1.0.1 ; sys_platform == "darwin"
 easyocr==1.7.2

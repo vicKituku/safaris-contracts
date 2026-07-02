@@ -48,17 +48,28 @@ SOURCE_EXTS = {".pdf", ".docx"}
 MIN_CONTENT_CHARS = 30
 
 
+def _ocr_options():
+    """Prefer Apple Vision (ocrmac) — best on clean scans and what the Mac mini
+    runs; fall back to EasyOCR anywhere ocrmac isn't installed (e.g. Linux).
+    docling 2.108's default (RapidOCR/torch) is broken on this corpus."""
+    try:
+        import ocrmac  # noqa: F401 — ensure the backend is actually present
+
+        from docling.datamodel.pipeline_options import OcrMacOptions
+
+        return OcrMacOptions(force_full_page_ocr=True)
+    except Exception:
+        return EasyOcrOptions(force_full_page_ocr=True)
+
+
 def build_converter(*, ocr: bool) -> DocumentConverter:
     """A converter for PDF (+ DOCX). `ocr` toggles the slow OCR pass (PDF only)."""
     pdf = PdfPipelineOptions()
     pdf.do_ocr = ocr
     if ocr:
-        # docling 2.108's default OCR (RapidOCR / torch) errors with
-        # "Unsupported configuration: torch.PP-OCRv6.det.small". EasyOCR is the
-        # reliable cross-platform engine; it downloads its models once.
         # force_full_page_ocr: image-only scans are a single full-page bitmap;
         # regional OCR skips them, so force OCR over the whole page.
-        pdf.ocr_options = EasyOcrOptions(force_full_page_ocr=True)
+        pdf.ocr_options = _ocr_options()
     pdf.do_table_structure = True
     pdf.table_structure_options.mode = TableFormerMode.ACCURATE  # rate matrices matter
     # AUTO → MPS on Apple Silicon, CPU elsewhere. Same script runs anywhere.
@@ -91,13 +102,17 @@ def write_artifacts(adir: Path, doc, markdown: str) -> None:
 
 
 def find_sources() -> list[Path]:
+    def excluded(p: Path) -> bool:
+        # skip artifacts/, .git, .venv/venv, node_modules — any dotdir or env dir
+        return OUT in p.parents or any(
+            part.startswith(".") or part in {"venv", "node_modules"}
+            for part in p.parts
+        )
+
     return sorted(
         p
         for p in REPO.rglob("*")
-        if p.is_file()
-        and p.suffix.lower() in SOURCE_EXTS
-        and OUT not in p.parents
-        and ".git" not in p.parts
+        if p.is_file() and p.suffix.lower() in SOURCE_EXTS and not excluded(p)
     )
 
 
