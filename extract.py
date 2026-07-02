@@ -56,7 +56,9 @@ def build_converter(*, ocr: bool) -> DocumentConverter:
         # docling 2.108's default OCR (RapidOCR / torch) errors with
         # "Unsupported configuration: torch.PP-OCRv6.det.small". EasyOCR is the
         # reliable cross-platform engine; it downloads its models once.
-        pdf.ocr_options = EasyOcrOptions()
+        # force_full_page_ocr: image-only scans are a single full-page bitmap;
+        # regional OCR skips them, so force OCR over the whole page.
+        pdf.ocr_options = EasyOcrOptions(force_full_page_ocr=True)
     pdf.do_table_structure = True
     pdf.table_structure_options.mode = TableFormerMode.ACCURATE  # rate matrices matter
     # AUTO → MPS on Apple Silicon, CPU elsewhere. Same script runs anywhere.
@@ -112,7 +114,11 @@ def main() -> int:
 
     for n, src in enumerate(sources, 1):
         adir = artifact_dir(src)
-        if (adir / "content.md").exists():
+        # "Done" means a real extraction: an existing but near-empty content.md
+        # (an image-only scan the previous run couldn't read) is re-attempted,
+        # now with force-full-page OCR.
+        existing = adir / "content.md"
+        if existing.exists() and len(existing.read_text(encoding="utf-8").strip()) >= MIN_CONTENT_CHARS:
             skipped += 1
             continue
         rel = src.relative_to(REPO)
